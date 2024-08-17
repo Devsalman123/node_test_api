@@ -1,0 +1,27 @@
+{
+  "name": "node_test_task",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "start:redis": "redis-server",
+    "start:node": "nodemon server.js",
+    "serve": "concurrently \"npm run start:redis\" \"npm run start:node\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4"
+  }
+}
